@@ -1,0 +1,10 @@
+__pycache__/
+.vscode/
+sinergym.egg-info
+tests/
+docs/
+scripts/
+examples/
+logs/
+models/
+
