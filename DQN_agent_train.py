@@ -6,7 +6,7 @@ from utils import initialize_logging
 from torch.utils.tensorboard import SummaryWriter
 from DQN import Agent
 # Creating environment and applying wrappers for normalization and logging
-env = gym.make('Eplus-datacenter-hot-continuous-stochastic-v1')
+env = gym.make('Eplus-5zone-hot-continuous-stochastic-v1')
 log_dir,model_dir = initialize_logging("DQN") 
 writer = SummaryWriter(log_dir=log_dir)
 

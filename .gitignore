@@ -8,3 +8,4 @@ examples/
 logs/
 models/
 Eplus-env*/
+wandb/

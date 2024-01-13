@@ -5,13 +5,13 @@ from sinergym.utils.wrappers import (NormalizeAction,NormalizeObservation)
 from utils import initialize_logging
 from torch.utils.tensorboard import SummaryWriter
 
-from sinergym.utils.controllers import RBCDatacenter
+from sinergym.utils.controllers import RBC5Zone
 # Creating environment and applying wrappers for normalization and logging
-env = gym.make('Eplus-datacenter-hot-continuous-stochastic-v1')
+env = gym.make('Eplus-5zone-hot-continuous-stochastic-v1')
 #Initialize logging for tensorboard and model saving
 log_dir,model_dir = initialize_logging("RBC")
 writer = SummaryWriter(log_dir=log_dir)
-agent = RBCDatacenter(env)
+agent = RBC5Zone(env)
 num_of_episodes = 10
 step = 0
 scores, eps_history = [], []

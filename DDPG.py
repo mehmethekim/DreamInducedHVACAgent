@@ -220,7 +220,6 @@ class Agent(object):
                                  dtype=T.float).to(self.actor.device)
         mu_prime= np.clip(mu_prime.cpu().detach().numpy(), -1.0, 1.0)
         self.actor.train()
-
         action = self.lower_bounds + 0.5 * (mu_prime + 1.0) * (self.higher_bounds - self.lower_bounds)
 
         return tuple(action)

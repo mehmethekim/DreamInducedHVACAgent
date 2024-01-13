@@ -4,7 +4,7 @@ import sinergym
 from sinergym.utils.wrappers import (NormalizeAction,NormalizeObservation)
 from utils import initialize_logging
 from torch.utils.tensorboard import SummaryWriter
-from DDPG import Agent
+from PPO import Agent
 # Creating environment and applying wrappers for normalization and logging
 env = gym.make('Eplus-5zone-hot-continuous-stochastic-v1')
 log_dir,model_dir = initialize_logging("DDPG") 

@@ -4,7 +4,7 @@ import sinergym
 from sinergym.utils.wrappers import (NormalizeAction,NormalizeObservation)
 from utils import initialize_logging
 from torch.utils.tensorboard import SummaryWriter
-from custom_controllers.DQN_controller import Agent
+from DQN import Agent
 from sinergym.utils.controllers import RBCDatacenter
 # Creating environment and applying wrappers for normalization and logging
 env = gym.make('Eplus-datacenter-hot-continuous-stochastic-v1')
